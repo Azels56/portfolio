@@ -1,0 +1,136 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar Animations */
+@keyframes slideIn {
+  0% { transform: translateY(-20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.nav-link-anim {
+  animation: slideIn 0.6s ease forwards;
+}
+
+/* Hero Animations */
+@keyframes hero-fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes hero-slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-animate-fadeIn {
+  animation: hero-fadeIn 1s ease-out forwards;
+}
+.hero-animate-slideUp {
+  animation: hero-slideUp 1.2s ease-out forwards;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+  
+/* About & Experience Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideIn {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.animate-fadeIn { animation: fadeIn 1s ease-in-out forwards; will-change: opacity, transform; }
+.animate-fadeUp { animation: fadeUp 1.2s ease-in-out forwards; will-change: opacity, transform; }
+.animate-slideIn { animation: slideIn 1.5s ease-in-out forwards; will-change: width; }
+
+.delay-100 { animation-delay: 0.2s; }
+.delay-200 { animation-delay: 0.4s; }
+.delay-300 { animation-delay: 0.6s; }
+
+.group:hover { transition: transform 0.5s ease, box-shadow 0.5s ease; }
+
+/* Certificate Animations */
+@keyframes cert-fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes cert-fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes cert-slideIn {
+  from { width: 0; }
+  to { width: 200px; }
+}
+@keyframes cert-bubble {
+  0% { transform: scale(0.9); opacity: 0; }
+  50% { transform: scale(1.05); opacity: 1; }
+  70% { transform: scale(0.98); }
+  100% { transform: scale(1); }
+}
+
+.cert-animate-fadeIn { animation: cert-fadeIn 1s ease forwards; }
+.cert-animate-fadeUp { animation: cert-fadeUp 1.2s ease forwards; }
+.cert-animate-slideIn { animation: cert-slideIn 1.5s ease forwards; }
+.cert-animate-bubble { animation: cert-bubble 0.8s ease forwards; }
+
+.cert-delay-100 { animation-delay: 0.2s; }
+.cert-delay-200 { animation-delay: 0.4s; }
+.cert-delay-300 { animation-delay: 0.6s; }
+.cert-delay-400 { animation-delay: 0.8s; }
+
+.hover\:shadow-glow:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+}
+
+/* Education Animations */
+@keyframes edu-fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes edu-fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes edu-slideIn {
+  from { width: 0; }
+  to { width: 180px; }
+}
+
+.edu-animate-fadeIn { animation: edu-fadeIn 1s ease forwards; }
+.edu-animate-fadeUp { animation: edu-fadeUp 1s ease forwards; }
+.edu-animate-slideIn { animation: edu-slideIn 1.2s ease forwards; }
+
+.edu-delay-100 { animation-delay: 0.2s; }
+.edu-delay-200 { animation-delay: 0.4s; }
+.edu-delay-300 { animation-delay: 0.6s; }
+.edu-delay-400 { animation-delay: 0.8s; }
+
+/* Contact Animations */
+@keyframes contactFadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes contactFadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes contactSlideIn {
+  from { width: 0; }
+  to { width: 120px; }
+}
+
+.contact-animate-fadeIn { animation: contactFadeIn 1s ease forwards; }
+.contact-animate-fadeUp { animation: contactFadeUp 1.2s ease forwards; }
+.contact-animate-slideIn { animation: contactSlideIn 1.5s ease forwards; }
