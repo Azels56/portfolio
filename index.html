@@ -16,14 +16,12 @@
   <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
     <!-- NAVBAR -->
     <nav id="navbar" class="w-full p-5 bg-gray-100 dark:bg-gray-800 sticky top-0 z-50 transition-all duration-300 
-         border-b border-gray-300 dark:border-gray-700">
+     border-b border-gray-300 dark:border-gray-700">
       <div class="max-w-6xl mx-auto flex justify-between items-center">
-        <!-- Logo -->
         <div class="flex items-center space-x-3">
           <img src="/img/logo.png" alt="Logo" class="w-12 h-12 rounded-full shadow-md" />
           <h1 class="text-2xl font-bold tracking-wide">Emmanuel's Portfolio</h1>
         </div>
-        <!-- Links -->
         <ul class="hidden md:flex space-x-8 text-base font-stretch-condensed text-lg">
           <li class="nav-link-anim">
             <a href="#home" class="hover:text-blue-400 transition">Home</a>
@@ -44,11 +42,23 @@
             <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
           </li>
         </ul>
-        <!-- Theme Toggle -->
-        <button onclick="toggleTheme()" class="w-12 h-12 bg-blue-500 hover:bg-blue-600 transition rounded-full shadow-lg flex items-center justify-center transform hover:scale-110 active:scale-95">
-          <i class="fa-solid fa-sun text-white dark:hidden"></i>
-          <i class="fa-solid fa-moon text-white hidden dark:block"></i>
-        </button>
+        <div class="flex space-x-3">
+          <button onclick="toggleTheme()" class="w-12 h-12 bg-blue-500 hover:bg-blue-600 transition rounded-full shadow-lg flex items-center justify-center transform hover:scale-110 active:scale-95">
+            <i class="fa-solid fa-sun text-white dark:hidden"></i>
+            <i class="fa-solid fa-moon text-white hidden dark:block"></i>
+          </button>
+          <button id="menu-toggle" class="md:hidden w-12 h-12 bg-blue-500 hover:bg-blue-600 transition rounded-full shadow-lg flex items-center justify-center transform hover:scale-110 active:scale-95">
+            <i class="fa-solid fa-bars text-white"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden flex-col space-y-4 mt-4 bg-gray-100 dark:bg-gray-800 p-5 rounded-lg shadow-lg">
+        <a href="#home" class="block hover:text-blue-400 transition">Home</a>
+        <a href="#about" class="block hover:text-blue-400 transition">About</a>
+        <a href="#experience" class="block hover:text-blue-400 transition">Experience</a>
+        <a href="#certificates" class="block hover:text-blue-400 transition">Certificates</a>
+        <a href="#education" class="block hover:text-blue-400 transition">Education</a>
+        <a href="#contact" class="block hover:text-blue-400 transition">Contact</a>
       </div>
     </nav>
     <!-- HERO -->
@@ -76,22 +86,37 @@
         <!-- Text Content -->
         <div class="space-y-6 hero-animate-fadeIn">
           <span class="px-4 py-1 bg-green-100 text-green-700 
-                   dark:bg-green-800 dark:text-green-200 
-                   rounded-full text-sm font-semibold inline-block"> Ongoing IT Student & Web Developer </span>
+             dark:bg-green-800 dark:text-green-200 
+             rounded-full text-sm font-semibold inline-flex items-center space-x-2">
+            <i class="fa-solid fa-laptop-code"></i>
+            <span>Ongoing IT Student & Web Developer</span>
+          </span>
           <h1 class="text-5xl font-extrabold leading-tight 
                  text-gray-900 dark:text-white"> EMMANUEL JR D. MISOLA </h1>
           <p class="text-lg opacity-90 text-gray-700 dark:text-gray-300"> Aspiring IT professional passionate about web development, networking, and modern technology. Dedicated to building expressive, modular portfolios and solving real-world IT challenges. </p>
           <!-- Tags -->
           <div class="flex flex-wrap gap-3 text-sm">
+            <!-- IT Student -->
             <span class="px-4 py-2 bg-blue-100 text-blue-800 
-                     dark:bg-blue-900 dark:text-blue-200 
-                     border rounded-full shadow"> IT Student </span>
+               dark:bg-blue-900 dark:text-blue-200 
+               border rounded-full shadow inline-flex items-center space-x-2">
+              <i class="fa-solid fa-user-graduate"></i>
+              <span>IT Student</span>
+            </span>
+            <!-- Web Developer -->
             <span class="px-4 py-2 bg-green-100 text-green-800 
-                     dark:bg-green-900 dark:text-green-200 
-                     border rounded-full shadow"> Web Developer </span>
+               dark:bg-green-900 dark:text-green-200 
+               border rounded-full shadow inline-flex items-center space-x-2">
+              <i class="fa-solid fa-code"></i>
+              <span>Web Developer</span>
+            </span>
+            <!-- Microsoft 365 Learner -->
             <span class="px-4 py-2 bg-purple-100 text-purple-800 
-                     dark:bg-purple-900 dark:text-purple-200 
-                     border rounded-full shadow"> Microsoft 365 Learner </span>
+               dark:bg-purple-900 dark:text-purple-200 
+               border rounded-full shadow inline-flex items-center space-x-2">
+              <i class="fa-solid fa-cloud"></i>
+              <span>Microsoft 365 Learner</span>
+            </span>
           </div>
           <div class="flex flex-wrap gap-4 pt-4">
             <a href="#experience" class="px-7 py-3 bg-blue-500 text-white rounded-full shadow 
@@ -304,9 +329,20 @@
         </div>
       </div>
     </section>
-    <!-- FOOTER -->
-    <footer class="p-4 text-center bg-gray-100 dark:bg-gray-800">
-      <p class="opacity-70">&copy; 2025 Emmanuel Jr D. Misola. All rights reserved. Built with HTML, CSS & Tailwind CSS.</p>
-    </footer>
+ <!-- FOOTER -->
+<footer class="w-full bg-gray-100 dark:bg-gray-800 border-t border-gray-300 dark:border-gray-700">
+  <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between text-sm">
+    <p class="text-gray-600 dark:text-gray-300">
+      &copy; 2025 <span class="font-semibold">Emmanuel Jr D. Misola</span>. All rights reserved.
+    </p>
+    <!-- Right: Built with -->
+    <p class="mt-2 md:mt-0 text-gray-500 dark:text-gray-400 flex items-center space-x-2">
+      <span>Built with</span>
+      <span class="font-semibold text-blue-600 dark:text-blue-400">HTML</span>,
+      <span class="font-semibold text-green-600 dark:text-green-400">CSS</span>&nbsp &
+      <span class="font-semibold text-teal-600 dark:text-teal-400">Tailwind CSS</span>
+    </p>
+  </div>
+</footer>
   </body>
 </html>
