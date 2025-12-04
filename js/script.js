@@ -14,6 +14,19 @@ tailwind.config = {
     }
 };
 
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  if (!menuToggle || !mobileMenu) return; // safety if IDs missing
+
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+});
+
+
+
 /* Default Theme */
 function toggleTheme() {
     document.documentElement.classList.toggle("dark");
@@ -39,8 +52,3 @@ window.addEventListener('scroll', () => {
     }
 });
 
-const menuToggle = document.getElementById("menu-toggle");
-const mobileMenu = document.getElementById("mobile-menu");
-menuToggle.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-});
