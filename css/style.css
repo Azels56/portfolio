@@ -134,3 +134,15 @@ html {
 .contact-animate-fadeIn { animation: contactFadeIn 1s ease forwards; }
 .contact-animate-fadeUp { animation: contactFadeUp 1.2s ease forwards; }
 .contact-animate-slideIn { animation: contactSlideIn 1.5s ease forwards; }
+
+/* Tailwind scrollbar */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #3b82f6; /* Tailwind blue-500 */
+  border-radius: 9999px;
+}
